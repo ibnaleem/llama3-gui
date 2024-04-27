@@ -44,7 +44,7 @@ def action_bar() -> rx.Component:
         rx.input(
             placeholder="Message Llama3",
             value=State.content,
-            on_change=State.set_question,
+            on_change=State.set_content,
             style=style.input_style,
         ),
         rx.button(
