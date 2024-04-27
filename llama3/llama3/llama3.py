@@ -17,10 +17,10 @@ class State(rx.State):
 
 
 
-def qa(question: str, answer: str) -> rx.Component:
+def qa(content: str, answer: str) -> rx.Component:
     return rx.box(
         rx.box(
-            rx.text(question, text_align="left"),
+            rx.text(content, text_align="left"),
             style=style.question_style,
         ),
         rx.box(
@@ -43,7 +43,7 @@ def action_bar() -> rx.Component:
     return rx.hstack(
         rx.input(
             placeholder="Message Llama3",
-            value=State.question,
+            value=State.content,
             on_change=State.set_question,
             style=style.input_style,
         ),
